@@ -5,12 +5,14 @@ import App from './App';
 
 describe('Habit Grove workflow', () => {
   it('shows an empty state on Today', () => {
+    localStorage.setItem('habit-grove:store', JSON.stringify({ habits: [], checkins: {} }));
     window.location.hash = '/today';
     render(<App />);
     expect(screen.getByText('No habits yet')).toBeInTheDocument();
   });
 
   it('creates a habit with validation, then checks in', async () => {
+    localStorage.setItem('habit-grove:store', JSON.stringify({ habits: [], checkins: {} }));
     window.location.hash = '/habits';
     const user = userEvent.setup();
     const { unmount } = render(<App />);
@@ -36,14 +38,24 @@ describe('Habit Grove workflow', () => {
   });
 
   it('loads demo data and shows weekly stats', async () => {
+    localStorage.setItem('habit-grove:store', JSON.stringify({ habits: [], checkins: {} }));
     window.location.hash = '/today';
     const user = userEvent.setup();
     const { unmount } = render(<App />);
     await user.click(screen.getByRole('button', { name: 'Load demo habits' }));
-    expect(screen.getByText('Demo: Walk 20 minutes')).toBeInTheDocument();
+    expect(screen.getByText('Walk 20 minutes')).toBeInTheDocument();
     unmount();
     window.location.hash = '/stats';
     render(<App />);
     expect(screen.getByRole('heading', { name: 'By habit' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /heatmap/ })).toBeInTheDocument();
+  });
+});
+
+describe('default state', () => {
+  it('opens with labelled demo habits', () => {
+    window.location.hash = '/today';
+    render(<App />);
+    expect(screen.getAllByText('Demo data').length).toBeGreaterThan(0);
   });
 });
