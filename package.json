@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "Track daily habits, streaks and weekly progress.",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",

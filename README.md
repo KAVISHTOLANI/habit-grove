@@ -2,6 +2,8 @@
 
 A habit tracker built around a calendar heatmap: per-habit schedules, daily check-ins, streaks that respect rest days, missed-day lists, a month calendar and weekly statistics.
 
+**Live demo:** [https://kavishtolani.github.io/habit-grove/](https://kavishtolani.github.io/habit-grove/) — runs entirely in your browser; demo data is fictional and labelled.
+
 ![Landing with the live heatmap preview](docs/landing.png)
 
 | Today | Mobile |
@@ -53,3 +55,7 @@ Shared editorial system (see the portfolio README): Instrument Serif display typ
 ## Future improvements
 
 - Quantity habits with daily targets; schedule history; CSV export.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE).
