@@ -1,5 +1,17 @@
 # Habit Grove
 
+<!-- screenshots:start -->
+<p align="center">
+  <img src="docs/screenshots/desktop.png" alt="Habit Grove on a Mac (1440×900)" width="100%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/tablet.png" alt="Habit Grove on a tablet" height="460">
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/phone.png" alt="Habit Grove on a phone" height="460">
+</p>
+<p align="center"><sub>Mac (1440×900) · Tablet (820×1180) · Phone (390×844)</sub></p>
+<!-- screenshots:end -->
+
 A habit tracker built around a calendar heatmap: per-habit schedules, daily check-ins, streaks that respect rest days, missed-day lists, a month calendar and weekly statistics.
 
 **Live demo:** [https://kavishtolani.github.io/habit-grove/](https://kavishtolani.github.io/habit-grove/) — runs entirely in your browser; demo data is fictional and labelled.
